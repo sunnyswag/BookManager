@@ -42,7 +42,7 @@ public class LoginBiz {
         // 检查 ticket
         Ticket t = ticketService.getTicket(user.getId());
 
-        // TODO 退出登录的时候不是删除了吗？
+        // 退出登录的时候不是删除了吗？注册时添加到了数据库
         // 如果没有 ticket，则生成一个
         if(t == null){
             t = TicketUtils.next(user.getId());
