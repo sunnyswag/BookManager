@@ -1,7 +1,9 @@
 package org.henhaoqi.BookManager.controllers;
 
 import org.henhaoqi.BookManager.entity.Book;
+import org.henhaoqi.BookManager.entity.User;
 import org.henhaoqi.BookManager.service.BookService;
+import org.henhaoqi.BookManager.service.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,8 +17,16 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
+    @Autowired
+    private HostHolder hostHolder;
+
     @RequestMapping(path = {"/index"}, method = {RequestMethod.GET})
     public String bookList(Model model){
+
+        User host = hostHolder.getUser();
+        if(host != null)
+            model.addAttribute("host", host);
+
         loadAllBooksView(model);
         return "book/books";
     }

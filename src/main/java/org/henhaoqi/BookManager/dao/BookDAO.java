@@ -14,8 +14,7 @@ public interface BookDAO {
     @Select({"select", select_field, "from", table_name})
     List<Book> selectAll();
 
-    @Insert({"insert into", table_name, "(", insert_field,
-            ") values (#{name}, #{author}, #{price})"})
+    @Insert({"insert into", table_name, "(", insert_field, ") values (#{name}, #{author}, #{price})"})
     int addBook(Book book);
 
     @Update({"update ", table_name, " set status=#{status} where id=#{id}"})

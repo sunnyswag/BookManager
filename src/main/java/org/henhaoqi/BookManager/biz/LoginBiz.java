@@ -10,9 +10,11 @@ import org.henhaoqi.BookManager.utils.ConcurrentUtils;
 import org.henhaoqi.BookManager.utils.MD5;
 import org.henhaoqi.BookManager.utils.TicketUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
+@Service
 public class LoginBiz {
     @Autowired
     private UserService userService;
