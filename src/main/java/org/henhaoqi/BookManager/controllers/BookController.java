@@ -1,6 +1,6 @@
 package org.henhaoqi.BookManager.controllers;
 
-import org.henhaoqi.BookManager.model.Book;
+import org.henhaoqi.BookManager.entity.Book;
 import org.henhaoqi.BookManager.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

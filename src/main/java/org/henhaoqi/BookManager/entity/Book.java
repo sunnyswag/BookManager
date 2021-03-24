@@ -1,4 +1,4 @@
-package org.henhaoqi.BookManager.model;
+package org.henhaoqi.BookManager.entity;
 
 public class Book {
     private int id;

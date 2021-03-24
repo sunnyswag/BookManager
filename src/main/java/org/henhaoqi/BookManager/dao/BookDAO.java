@@ -1,12 +1,12 @@
 package org.henhaoqi.BookManager.dao;
 
 import org.apache.ibatis.annotations.*;
-import org.henhaoqi.BookManager.model.Book;
+import org.henhaoqi.BookManager.entity.Book;
 
 import java.util.List;
 
 @Mapper
-public interface BookDao {
+public interface BookDAO {
     String table_name = " book ";
     String insert_field = " name, author, price ";
     String select_field = " id, status, " + insert_field;

@@ -1,8 +1,8 @@
 package org.henhaoqi.BookManager.service;
 
-import org.henhaoqi.BookManager.dao.BookDao;
-import org.henhaoqi.BookManager.model.Book;
-import org.henhaoqi.BookManager.model.enums.BookStatusEnum;
+import org.henhaoqi.BookManager.dao.BookDAO;
+import org.henhaoqi.BookManager.entity.Book;
+import org.henhaoqi.BookManager.entity.enums.BookStatusEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class BookService {
     @Autowired
-    private BookDao bookDao;
+    private BookDAO bookDao;
 
     public List<Book> getAllBooks(){
         return bookDao.selectAll();

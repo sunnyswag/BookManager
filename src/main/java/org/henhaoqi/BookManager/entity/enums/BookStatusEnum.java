@@ -1,4 +1,4 @@
-package org.henhaoqi.BookManager.model.enums;
+package org.henhaoqi.BookManager.entity.enums;
 
 public enum BookStatusEnum {
 
